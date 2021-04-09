@@ -35,7 +35,9 @@ def get_qualified_SNPs(vcf1_input,vcf2_input,depth,output):
                 DP_pos=line1[8].split(":").index("DP")
                 flag=1
                 for sample in range(1,sample_num+1):
-                    if line1[8+sample].split(":")[DP_pos]>= depth:
+#                    print("before  %s"%(line1[8+sample].split(":")[DP_pos]))
+                    if int(line1[8+sample].split(":")[DP_pos])>= int(depth):
+#                        print("after     %s"%(line1[8+sample].split(":")[DP_pos]))
                         continue
                     else:
                         flag=flag-2
@@ -63,5 +65,5 @@ if __name__ == "__main__":
     else:
         print("Usage: get_qualified_SNPs.py vcf1_input(as_the_larger_one_with_depth_info) vcf2_input depth output")
         sys.exit(0)
-
-
+        
+        
