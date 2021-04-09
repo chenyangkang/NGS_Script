@@ -65,5 +65,11 @@ if __name__ == "__main__":
     else:
         print("Usage: get_qualified_SNPs.py vcf1_input(as_the_larger_one_with_depth_info) vcf2_input depth output")
         sys.exit(0)
-        
-        
+
+
+### Copy right: This script is written by Chen Yangkang, master student from Institute of Zoology, Chinese Academy of Science.
+#  Please donnot remove this block.
+# 
+# ###
+
+
